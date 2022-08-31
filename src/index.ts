@@ -26,6 +26,9 @@ app.use(
 );
 app.use(bodyParser.json());
 
+const bookRouter = require("./routes/book_routes");
+app.use("/books", bookRouter);
+
 app.get('/', (req: Request, res: Response) => {
   res.send('Express + TypeScript Server Muhammad');
 });
