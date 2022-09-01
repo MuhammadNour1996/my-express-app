@@ -6,7 +6,7 @@ const AuthorSchema = new Schema<Author>({
   last_name: { type: String, required: true },
   date_of_birth: { type: Date, required: true },
   date_of_death: { type: Date, required: false },
-  books: [{ type: Schema.Types.ObjectId, ref: "Book" }],
+  books: [{ type: Schema.Types.ObjectId, ref: "book" }],
 });
 
 // Virtual for book's URL

@@ -5,7 +5,7 @@ const BookInstanceSchema = new Schema<BookInstance>({
   imprint: { type: String, required: true, /*unique: true*/ },
   status: { type: String, required: true },
   due_back: { type: Date, required: true },
-  book: { type: Schema.Types.ObjectId, ref: "Book", required: true },
+  book: { type: Schema.Types.ObjectId, ref: "book", required: true },
 });
 
 // Virtual for book's URL

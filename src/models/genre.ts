@@ -3,7 +3,7 @@ import { Genre } from "../types/interfaces";
 
 const GenreSchema = new Schema<Genre>({
   name: { type: String, required: true, /*unique: true*/ },
-  books: [{ type: Schema.Types.ObjectId, ref: "Book" }],
+  books: [{ type: Schema.Types.ObjectId, ref: "books" }],
 });
 
 // Virtual for book's URL
